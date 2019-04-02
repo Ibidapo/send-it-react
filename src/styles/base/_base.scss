@@ -1,11 +1,7 @@
-* {
+body {
+  background: whitesmoke;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $s-size;
-  text-align: center;
-  color: white;
-  height: 100%;
-  background: rgb(2,0,36);
-  background: linear-gradient(127deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 button {
@@ -14,4 +10,137 @@ button {
 
 button:disabled {
   cursor: default;
+}
+
+form {
+  button {
+    border-radius: 0.25rem;
+    background: #d1d8d8;
+    padding: 0.25rem 1rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+}
+
+.logo {
+  margin: 0.25rem 0 0;
+  width: 125px;
+}
+
+.purple-btn {
+  background-color: #4a08ef;
+  color: white;
+}
+
+.purple-btn, .grey-btn {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#list > a.active {
+  background-color: #4a08ef;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.purple-btn:hover, #list > a.active {
+  background-color: #4a08ef !important;
+  color: #ffc107;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for Texts */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+/* Styling for Display Flex */
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.space-start {
+  justify-content: flex-start;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.vertical-bottom {
+  align-self: flex-end;
+}
+
+/* Styling for Form elements */
+.box > form, .parcel-box {
+  width: 90%;
+}
+label, .label {
+  font-size: 0.875rem;
+  color: grey;
+}
+.input-icon, input:not([type="checkbox"]){
+  position: relative;
+}
+input:not([type="checkbox"]), .input {
+  min-height: 1.75rem;
+  line-height: 1.75rem;
+}
+input:not([type="checkbox"]){
+  font-size: 1rem;
+  width: -webkit-fill-available;
+  border-bottom-color: rgb(238, 238, 238);
+  border-radius: 0;
+  border-width: 0 0 2px 0;
+}
+.input-icon input {
+  padding-left: 1.75rem;
+}
+.input-icon .fa-eye, .input-icon .fa-eye-slash {
+  cursor: pointer;
+}
+.input-icon i {
+  position: absolute;
+  top: 2.5rem;
+  left: 0.25rem;
+  color: #d2d8d8;
+}
+input:not([type="checkbox"]):focus {
+  outline: none;
+  border-width: 0 0 2px 0;
+  border-color: blue;
+}
+.parcel-info input[type="text"] {
+  line-height: 1;
+  min-height: 1rem;
+  max-width: 250px;
+  background: #eeeeee;
+}
+#greetings > form {
+  display: inline-block;
+  position: absolute;
+  line-height: 60px;
+  width: 200px;
+  opacity: 0;
+}
+input[type=file], input[type=file]::-webkit-file-upload-button {
+  cursor: pointer; 
+}
+input::placeholder {
+  color: #d3d3d3;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

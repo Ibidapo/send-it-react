@@ -1,0 +1,61 @@
+@import '../../../styles/base/settings';
+
+#content {
+  background: linear-gradient(127deg, #5800f8 35%, #00d4ff 100%); 
+}
+
+.content-intro {
+  color: white;
+  width: 80%
+}
+
+/* Styling for Login Form */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  > .tab-group {
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 100%;
+
+    > a {
+      background: #d2d8d8;
+      color: #666666;
+      width: 50%;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none; 
+    }
+
+    > .active {
+      background:white;
+      color: #4a08ef;
+    }
+
+    > :not(.active) {
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  form {
+    width: 80%
+  }
+}
+
+.help-text {
+  color: #666666;
+  font-size: 0.875rem;
+  text-decoration: none;
+  margin: 0.5rem 0;
+}
+.help-text:hover, .help-text.focus {
+  color: #4a08ef;
+}

@@ -1,0 +1,18 @@
+@import '../../../styles/base/settings';
+
+#banner {
+  background: url(/images/courier-dark-bg.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0;
+  height: 600px;
+  color: white;
+}
+
+.intro {
+  position: relative;
+  top: 175px;
+}
+
+#login-banner {
+  position: relative;
+}
