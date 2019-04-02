@@ -1,7 +1,7 @@
 import axios from '../../utils/axiosConfig';
 import {
-  ADD_PARCEL, GET_PARCELS, CANCEL_PARCEL, UPDATE_PARCEL_STATUS,
-  UPDATE_PARCEL_LOCATION, UPDATE_PARCEL_DESTINATION 
+  ADD_PARCEL, GET_PARCELS, CANCEL_PARCEL, DELIVER_PARCEL,
+  UPDATE_PARCEL_LOCATION, UPDATE_PARCEL_DESTINATION
 } from './types';
 import escapeInputs from '../../utils/escapeInputs';
 
@@ -14,7 +14,6 @@ export const addParcel = (details) => async (dispatch) => {
     const {
       data: { success, parcels }
     } = await axios.post(`${apiEndpoint}/parcels/`, escapedDetails);
-    
     dispatch({ type: ADD_PARCEL, payload: parcels });
     return ({ success, parcels });
   } catch ({ response: { data: { error } } }) {
@@ -43,3 +42,29 @@ export const getParcelsByUser = (id) => async (dispatch) => {
     return ({ error });
   }
 };
+
+export const editParcelDestination = (id, details) => async (dispatch) => {
+  const escapedDetails = escapeInputs(details);
+
+  try {
+    const {
+      data: { success, parcels }
+    } = await axios.put(`${apiEndpoint}/parcels/${id}/destination`, escapedDetails);
+
+    dispatch({ type: UPDATE_PARCEL_DESTINATION, payload: parcels, id });
+    return ({ success });
+  } catch ({ response: { data: { error } } }) {
+    return ({ error });
+  }
+}
+
+export const cancelParcel = (id) => async (dispatch) => {
+  try {
+    const { data: { success, parcels } } = await axios.put(`${apiEndpoint}/parcels/${id}/cancel`);
+
+    dispatch({ type: CANCEL_PARCEL, payload: parcels, id });
+    return ({ success });
+  } catch ({ response: { data: { error } } }) {
+    return ({ error });
+  }
+}
