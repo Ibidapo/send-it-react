@@ -1,0 +1,34 @@
+.tab-contents-area {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .box {
+    background: white;
+    width: 75%;
+    margin: 5rem auto auto;
+    border-radius: 1rem;
+    box-shadow:0 4px 8px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .welcome-box {
+    background: transparent;
+    width: 75%;
+    margin: 5rem auto auto;
+  }
+}
+
+.tab-contents-area#dashboard {
+  position: relative;
+  left: 20%;
+  right: 0;
+  width: 80%;
+
+  form {
+    margin: 3rem auto;
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+}

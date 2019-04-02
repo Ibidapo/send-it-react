@@ -1,0 +1,37 @@
+.side-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  padding-top: 10rem;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+
+  > h3 {
+    margin-left: 1.25rem;
+  }
+
+  > a {
+    color: #4a08ef;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin: 0.25rem 1rem;
+    width: fit-content
+  }
+
+  > a:hover {
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  > a.active {
+    background-color: #4a08ef !important;
+    color: #ffc107;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+}
