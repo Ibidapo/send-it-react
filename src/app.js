@@ -1,18 +1,6 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from 'react';
 import 'normalize.css/normalize.css';
-
-import storeConfig from './redux/store/config';
-import AppRouter from './routes/routes';
 import './styles/style.scss';
 
-const store = storeConfig();
-
-const app = (
-  <Provider store={store}>
-    <AppRouter />
-  </Provider>
-);
-
-ReactDOM.render(app, document.getElementById('app'));
+ReactDOM.render(<p>Boilerplate</p>, document.getElementById('app'));
