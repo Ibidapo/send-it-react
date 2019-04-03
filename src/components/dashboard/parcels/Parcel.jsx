@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faTimes, faPencilAlt, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
 
-import { editParcelDestination, cancelParcel } from '../../../redux/actions/parcels';
-import toasOptions from '../../../utils/toastOptions';
+import { 
+  editParcelDestination, cancelParcel, editParcelLocation 
+} from '../../../redux/actions/parcels';
+import toastOptions from '../../../utils/toastOptions';
 import './styles.scss';
 
 class Parcel extends Component {
@@ -31,17 +33,23 @@ class Parcel extends Component {
 
   onEditParcel = async () => {
     const { 
-      props: { is_admin, parcel_id, editParcelDestination }, 
-      state: { destination, location, status } 
+      props: { is_admin, parcel_id, editParcelDestination, editParcelLocation }, 
+      state: { destination, location } 
     } = this;
 
     if (!is_admin ) {
-      if (!destination) return toast.error('Destination cannot be empty', toasOptions);
+      if (!destination) return toast.error('Destination cannot be empty', toastOptions);
 
       const { error, success } = await editParcelDestination(parcel_id, { destination });
-      if (error) return toast.error(error, toasOptions);
-      toast.success(success, toasOptions);
+      if (error) return toast.error(error, toastOptions);
+      return toast.success(success, toastOptions);
     }
+
+    if (!location) return toast.error('Location cannot be empty', toastOptions)
+
+    const { error, success } = await editParcelLocation(parcel_id, { presentLocation: location });
+    if (error) return toast.error(error, toastOptions);
+    return toast.success(success, toastOptions);
   }
 
   onCancelParcel = async () => {
@@ -49,8 +57,8 @@ class Parcel extends Component {
 
     if (!is_admin) {
       const { error, success } = await cancelParcel(parcel_id);
-      if (error) return toast.error(error, toasOptions);
-      toast.success(success, toasOptions);
+      if (error) return toast.error(error, toastOptions);
+      toast.success(success, toastOptions);
     }
   }
 
@@ -170,10 +178,11 @@ Parcel.propTypes = {
   recipient_phone: PropTypes.string,
   created_on: PropTypes.string,
   editParcelDestination: PropTypes.func,
-  cancelParcel: PropTypes.func
+  cancelParcel: PropTypes.func,
+  editParcelLocation: PropTypes.func
 }
 
 const mapStateToProps = ({ profile: { is_admin } }) => ({ is_admin })
-const mapDispatchToProps = ({ editParcelDestination, cancelParcel });
+const mapDispatchToProps = ({ editParcelDestination, cancelParcel, editParcelLocation });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Parcel);

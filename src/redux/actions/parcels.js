@@ -68,3 +68,18 @@ export const cancelParcel = (id) => async (dispatch) => {
     return ({ error });
   }
 }
+
+export const editParcelLocation = (id, details) => async (dispatch) => {
+  const escapedDetails = escapeInputs(details);
+
+  try {
+    const {
+      data: { success, parcels }
+    } = await axios.put(`${apiEndpoint}/parcels/${id}/presentLocation`, escapedDetails);
+
+    dispatch({ type: UPDATE_PARCEL_LOCATION, payload: parcels, id });
+    return ({ success });
+  } catch ({ response: { data: { error } } }) {
+    return ({ error });
+  }
+}
