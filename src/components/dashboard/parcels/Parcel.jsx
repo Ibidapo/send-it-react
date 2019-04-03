@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faTimes, faPencilAlt, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-toastify';
 
+import { editParcelDestination, cancelParcel } from '../../../redux/actions/parcels';
+import toasOptions from '../../../utils/toastOptions';
 import './styles.scss';
 
 class Parcel extends Component {
@@ -26,15 +29,37 @@ class Parcel extends Component {
   onDestinationChange = ({ target: { value } }) => this.setState({ destination: value });
   onLocationChange = ({ target: { value } }) => this.setState({ location: value });
 
-  editParcel = () => {
-    
+  onEditParcel = async () => {
+    const { 
+      props: { is_admin, parcel_id, editParcelDestination }, 
+      state: { destination, location, status } 
+    } = this;
+
+    if (!is_admin ) {
+      if (!destination) return toast.error('Destination cannot be empty', toasOptions);
+
+      const { error, success } = await editParcelDestination(parcel_id, { destination });
+      if (error) return toast.error(error, toasOptions);
+      toast.success(success, toasOptions);
+    }
+  }
+
+  onCancelParcel = async () => {
+    const { props: { is_admin, parcel_id, cancelParcel } } = this;
+
+    if (!is_admin) {
+      const { error, success } = await cancelParcel(parcel_id);
+      if (error) return toast.error(error, toasOptions);
+      toast.success(success, toasOptions);
+    }
   }
 
   render() {
     const { 
       state: { viewToggle, editToggle, destination, location, status },
       props: { is_admin, parcel_id, origin, parcel_kg, quote, recipient_phone, created_on },
-      onDestinationChange, onLocationChange, onEditToggle, onViewToggle, editParcel
+      onDestinationChange, onLocationChange, onEditToggle, onViewToggle, onEditParcel, 
+      onCancelParcel
     } = this;
 
     return (
@@ -48,21 +73,34 @@ class Parcel extends Component {
             <button 
               title="Deliver Order" 
               className={`icon ${is_admin ? 'active' : ''}`}
+              disabled={status === 'Delivered' ? true : false }
             >
-              <FontAwesomeIcon icon={faCheckSquare} color='#ffc107' />
+              <FontAwesomeIcon 
+                icon={faCheckSquare} 
+                color={status === 'Delivered' ? '808080' : '#ffc107'} 
+              />
             </button>
             <button 
               title="Cancel Order" 
               className={`icon ${!is_admin ? 'active' : ''}`}
+              onClick={onCancelParcel}
+              disabled={status === 'Cancelled' ? true : false}
             >
-              <FontAwesomeIcon icon={faTimes} color='#ff0000' />
+              <FontAwesomeIcon 
+                icon={faTimes} 
+                color={status === 'Cancelled' ? '#808080' : '#ff0000'} 
+              />
             </button>
             <button 
               title="Edit Order" 
               className="icon active"
               onClick={onEditToggle}
+              disabled={status === 'Cancelled' || status === 'Delivered' ? true : false}
             >
-              <FontAwesomeIcon icon={faPencilAlt} color='#0000ff' />
+              <FontAwesomeIcon 
+                icon={faPencilAlt} 
+                color={status === 'Cancelled' || status === 'Delivered' ? '#808080' : '#0000ff'} 
+              />
             </button>
             <button 
               title="View Order" 
@@ -109,7 +147,7 @@ class Parcel extends Component {
               </div>
               {editToggle && (
                 <div className="w-100 mt-1 text-center">
-                  <button className='form-button' onClick={editParcel}>save</button>
+                  <button className='form-button' onClick={onEditParcel}>save</button>
                 </div>
               )}
             </div>
@@ -130,10 +168,12 @@ Parcel.propTypes = {
   parcel_kg: PropTypes.string, 
   quote: PropTypes.number,
   recipient_phone: PropTypes.string,
-  created_on: PropTypes.string
+  created_on: PropTypes.string,
+  editParcelDestination: PropTypes.func,
+  cancelParcel: PropTypes.func
 }
 
 const mapStateToProps = ({ profile: { is_admin } }) => ({ is_admin })
-const mapDispatchToProps = ({  });
+const mapDispatchToProps = ({ editParcelDestination, cancelParcel });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Parcel);

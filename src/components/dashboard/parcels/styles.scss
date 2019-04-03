@@ -19,9 +19,13 @@
 .icon {
   border: none;
   background: transparent;
+  outline: none;
 }
 
 .active {
   display: block
 }
 
+button:disabled {
+  cursor: not-allowed !important
+}
