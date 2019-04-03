@@ -35,7 +35,7 @@ export const getAllParcels = () => async (dispatch) => {
 
 export const getParcelsByUser = (id) => async (dispatch) => {
   try {
-    const { data: { success, parcels } } = await axios.get(`${apiEndpoint}/parcels/${id}`);
+    const { data: { success, parcels } } = await axios.get(`${apiEndpoint}/users/${id}/parcels/`);
 
     dispatch({ type: GET_PARCELS, payload: parcels });
     return ({ success, parcels });
