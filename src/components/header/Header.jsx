@@ -23,37 +23,38 @@ class Header extends Component {
     const { state: { toggle }, props: { isLoggedIn }, toggleHeader, handleLogout } = this;
 
     return (
-      <header className="main-header">
-        <div className="d-flex space-between">
-          <button 
-            id="menu"  
-            onClick={toggleHeader}
-            className={toggle ? 'active' : ''}
-          >
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
-          </button>
-          <Link to='/'>
-            <img src="images/logo.png" alt="SendIT-logo" className="logo" />
-          </Link>
+      <header className={`main-header ${isLoggedIn ? 'dashboard' : ''}`}>
+        <div className={`d-flex ${isLoggedIn ? 'w-100 space-end' : 'space-between'}`}>
+          {!isLoggedIn && (
+            <React.Fragment>
+              <button
+                id="menu"
+                onClick={toggleHeader}
+                className={toggle ? 'active' : ''}
+              >
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+              </button>
+              <Link to='/'>
+                <img src="images/logo.png" alt="SendIT-logo" className="logo" />
+              </Link>
+            </React.Fragment>
+          )}
+          {isLoggedIn && (
+            <React.Fragment>
+              <Link to='/' className="purple-btn" onClick={handleLogout}>Logout</Link>
+            </React.Fragment>
+          )}
         </div>
         <div id="list" className={toggle ? 'active' : ''}>
-          {
-            isLoggedIn ?
-            (
-              <React.Fragment>
-                <Link to='/' onClick={handleLogout}>Logout</Link>
-                <Link to="#contact" className="purple-btn">My Dashboard</Link>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                <Link to="#about">About</Link>
-                <Link to="#contact">Contact</Link>
-                <Link to="#login" className="purple-btn">Login / Register</Link>
-              </React.Fragment>
-            )
-          }
+          {!isLoggedIn && (
+            <React.Fragment>
+              <Link to="#about">About</Link>
+              <Link to="#contact">Contact</Link>
+              <Link to="#login" className="purple-btn">Login / Register</Link>
+            </React.Fragment>
+          )}
         </div>
       </header>
     );

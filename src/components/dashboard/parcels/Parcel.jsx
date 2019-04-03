@@ -6,7 +6,7 @@ import { faCaretDown, faTimes, faPencilAlt, faCheckSquare } from '@fortawesome/f
 import { toast } from 'react-toastify';
 
 import { 
-  editParcelDestination, cancelParcel, editParcelLocation 
+  editParcelDestination, cancelParcel, editParcelLocation, deliverParcel 
 } from '../../../redux/actions/parcels';
 import toastOptions from '../../../utils/toastOptions';
 import './styles.scss';
@@ -62,41 +62,52 @@ class Parcel extends Component {
     }
   }
 
+  onDeliverParcel = async () => {
+    const { props: { is_admin, parcel_id, deliverParcel } } = this;
+
+    if (is_admin) {
+      const { error, success } = await deliverParcel(parcel_id);
+      if (error) return toast.error(error, toastOptions);
+      toast.success(success, toastOptions);
+    }
+  }
+
   render() {
     const { 
       state: { viewToggle, editToggle, destination, location, status },
       props: { is_admin, parcel_id, origin, parcel_kg, quote, recipient_phone, created_on },
       onDestinationChange, onLocationChange, onEditToggle, onViewToggle, onEditParcel, 
-      onCancelParcel
+      onCancelParcel, onDeliverParcel
     } = this;
 
     return (
       <div className="box py-1 my-1">
         <div className="parcel-box d-flex space-evenly mx-auto">
-          <div className="w-20">Order: # {parcel_id}</div>
+          <div className="w-20">Order: #{parcel_id}</div>
           <div className="w-20">Status: {status}</div>
-          <div className="w-20">Quote: &#8358; {quote}</div>
-          <div className="w-20"> {created_on}</div>
+          <div className="w-20">Quote: &#8358;{quote}</div>
+          <div className="w-20">{created_on}</div>
           <div className="w-20 d-flex space-between">
             <button 
               title="Deliver Order" 
               className={`icon ${is_admin ? 'active' : ''}`}
-              disabled={status === 'Delivered' ? true : false }
+              onClick={onDeliverParcel}
+              disabled={status === 'Cancelled' || status === 'Delivered' ? true : false }
             >
               <FontAwesomeIcon 
                 icon={faCheckSquare} 
-                color={status === 'Delivered' ? '808080' : '#ffc107'} 
+                color={status === 'Cancelled' || status === 'Delivered' ? '808080' : '#ffc107'} 
               />
             </button>
             <button 
               title="Cancel Order" 
               className={`icon ${!is_admin ? 'active' : ''}`}
               onClick={onCancelParcel}
-              disabled={status === 'Cancelled' ? true : false}
+              disabled={status === 'Cancelled' || status === 'Delivered' ? true : false}
             >
               <FontAwesomeIcon 
                 icon={faTimes} 
-                color={status === 'Cancelled' ? '#808080' : '#ff0000'} 
+                color={status === 'Cancelled' || status === 'Delivered' ? '#808080' : '#ff0000'} 
               />
             </button>
             <button 
@@ -179,10 +190,13 @@ Parcel.propTypes = {
   created_on: PropTypes.string,
   editParcelDestination: PropTypes.func,
   cancelParcel: PropTypes.func,
-  editParcelLocation: PropTypes.func
+  editParcelLocation: PropTypes.func,
+  deliverParcel: PropTypes.func
 }
 
 const mapStateToProps = ({ profile: { is_admin } }) => ({ is_admin })
-const mapDispatchToProps = ({ editParcelDestination, cancelParcel, editParcelLocation });
+const mapDispatchToProps = ({
+  editParcelDestination, cancelParcel, editParcelLocation, deliverParcel 
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Parcel);

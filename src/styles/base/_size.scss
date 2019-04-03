@@ -32,3 +32,20 @@
 .w-10 {
   width: 10%;
 }
+
+@media screen and (max-width: 60rem) {
+  .w-80,
+  .w-70,
+  .w-60,
+  .w-50,
+  .w-40,
+  .w-30,
+  .w-20,
+  .w-10 {
+    width: 90%
+  }
+
+  .w-20 {
+    text-align: center;
+  }
+}
