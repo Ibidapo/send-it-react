@@ -7,7 +7,21 @@
   outline: none;
 }
 
+.icon,
+.parcel-info {
+  display: none;
+}
+
+.parcel-info {
+  margin: 1rem auto;
+}
+
 .icon {
   border: none;
   background: transparent;
 }
+
+.active {
+  display: block
+}
+
