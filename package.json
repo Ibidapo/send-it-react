@@ -7,7 +7,11 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server --mode development"
+    "start": "node dist/",
+    "dev-server": "webpack-dev-server --mode development",
+    "test": "jest --config=jest.config.json",
+    "test-watch": "jest --watchAll --config=jest.config.json",
+    "coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
@@ -15,7 +19,9 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
+    "chalk": "^2.4.2",
     "dotenv": "^7.0.0",
+    "express": "^4.16.4",
     "lodash": "^4.17.11",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.7.2",
@@ -31,7 +37,8 @@
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
     "validator": "^10.11.0",
-    "webpack": "^4.28.4"
+    "webpack": "^4.28.4",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -39,9 +46,13 @@
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "axios-mock-adapter": "^1.16.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "css-loader": "0.28.4",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-loader": "^2.1.2",
@@ -50,9 +61,13 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "file-loader": "^3.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.7.1",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "4.5.3",
+    "raf": "^3.4.1",
+    "redux-mock-store": "^1.5.3",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   }

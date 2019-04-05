@@ -22,15 +22,11 @@ export const updateProfile = (details) => async (dispatch) => {
 
     dispatch({ 
       type: UPDATE_PROFILE,
-      payload: {
-        first_name: user.first_name,
-        last_name: user.last_name,
-        phone: user.phone
-      } 
+      payload: user
     });
     return ({ success, user });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 }
 

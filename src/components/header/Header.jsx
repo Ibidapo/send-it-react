@@ -7,7 +7,7 @@ import { logoutUser } from '../../redux/actions/auth';
 import { clearProfile } from '../../redux/actions/profile';
 import './styles.scss';
 
-class Header extends Component {
+export class Header extends Component {
   state = {
     toggle: false
   }

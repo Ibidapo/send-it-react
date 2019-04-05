@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1554565609298" clover="3.2.0">
+  <project timestamp="1554565609298" name="All files">
+    <metrics statements="173" coveredstatements="164" conditionals="76" coveredconditionals="71" methods="56" coveredmethods="52" elements="305" coveredelements="287" complexity="0" loc="173" ncloc="173" packages="10" files="21" classes="21"/>
+    <package name="components.footer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Footer.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/footer/Footer.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.header">
+      <metrics statements="9" coveredstatements="9" conditionals="14" coveredconditionals="14" methods="5" coveredmethods="4"/>
+      <file name="Header.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/header/Header.jsx">
+        <metrics statements="9" coveredstatements="9" conditionals="14" coveredconditionals="14" methods="5" coveredmethods="4"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.home.banner">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Banner.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/home/banner/Banner.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.home.content">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Content.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/home/content/Content.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.home.form">
+      <metrics statements="35" coveredstatements="27" conditionals="12" coveredconditionals="8" methods="12" coveredmethods="10"/>
+      <file name="Form.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/home/form/Form.jsx">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="35" count="12" type="stmt"/>
+        <line num="37" count="12" type="stmt"/>
+        <line num="63" count="4" type="stmt"/>
+      </file>
+      <file name="LoginForm.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/home/form/LoginForm.jsx">
+        <metrics statements="12" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+      </file>
+      <file name="RegisterForm.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/home/form/RegisterForm.jsx">
+        <metrics statements="12" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.tab-contents">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="TabContents.jsx" path="/Users/ibidaporasheed/Documents/send-it-react/src/components/tab-contents/TabContents.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="redux.actions">
+      <metrics statements="90" coveredstatements="90" conditionals="30" coveredconditionals="30" methods="26" coveredmethods="26"/>
+      <file name="auth.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/actions/auth.js">
+        <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+      <file name="parcels.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/actions/parcels.js">
+        <metrics statements="46" coveredstatements="46" conditionals="21" coveredconditionals="21" methods="14" coveredmethods="14"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="68" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="83" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="88" count="2" type="stmt"/>
+        <line num="91" count="2" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="96" count="1" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="profile.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/actions/profile.js">
+        <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="6"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+      <file name="types.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/actions/types.js">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="redux.reducers">
+      <metrics statements="20" coveredstatements="20" conditionals="20" coveredconditionals="19" methods="4" coveredmethods="4"/>
+      <file name="auth.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/reducers/auth.js">
+        <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="parcels.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/reducers/parcels.js">
+        <metrics statements="7" coveredstatements="7" conditionals="10" coveredconditionals="9" methods="2" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="7" type="cond" truecount="7" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="profile.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/redux/reducers/profile.js">
+        <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests.mock-data">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="auths.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/tests/mock-data/auths.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="parcels.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/tests/mock-data/parcels.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+      <file name="users.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/tests/mock-data/users.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <file name="axiosConfig.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/utils/axiosConfig.js">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="20" type="stmt"/>
+        <line num="5" count="20" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="escapeInputs.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/utils/escapeInputs.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="56" type="stmt"/>
+      </file>
+      <file name="toastOptions.js" path="/Users/ibidaporasheed/Documents/send-it-react/src/utils/toastOptions.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

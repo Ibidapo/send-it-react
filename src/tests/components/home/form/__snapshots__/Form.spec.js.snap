@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Form Component Should render correctly 1`] = `
+<form
+  className="mx-auto"
+  id="form"
+  onSubmit={[Function]}
+>
+  <div
+    className="pb-1"
+  >
+    <label
+      htmlFor="form-email"
+    >
+      Email
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="py-1"
+  >
+    <label
+      htmlFor="form-pass"
+    >
+      Password
+    </label>
+    <input
+      onChange={[Function]}
+      type="password"
+      value=""
+    />
+  </div>
+  <div
+    className="text-center pt-1"
+  >
+    <button
+      id="form-btn"
+    />
+  </div>
+</form>
+`;
