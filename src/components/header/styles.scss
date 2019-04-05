@@ -13,7 +13,12 @@
   transition: all ease-in-out 400ms;
 }
 
-.main-header, .user-header {
+.dashboard {
+  background: transparent;
+  box-shadow: none;
+}
+
+.main-header {
   height: 90px;
 }
 
@@ -84,5 +89,9 @@
     #list > a {
       margin: 0.5rem 0;
     }
+  }
+
+  .dashboard {
+    padding: 0 1rem;
   }
 }

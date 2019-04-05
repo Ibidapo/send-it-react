@@ -14,7 +14,13 @@ import filterParcels from '../../utils/filterParcels';
 
 class Dashboard extends Component {
   componentDidMount() {
-    const { props: { getAllParcels, getParcelsByUser, user_id, is_admin } } = this;
+    const { 
+      props: { getAllParcels, getParcelsByUser, user_id, is_admin, isLoggedIn, history } 
+    } = this;
+    if (!isLoggedIn) {
+      return history.push('/');
+    }
+
     if (is_admin) {
       return getAllParcels()
     }
@@ -47,10 +53,14 @@ Dashboard.propTypes = {
   getParcelsByUser: PropTypes.func,
   user_id: PropTypes.number,
   is_admin: PropTypes.bool,
-  parcels: PropTypes.array
+  parcels: PropTypes.array,
+  isLoggedIn: PropTypes.bool,
+  history: PropTypes.object
 }
 
-const mapStateToProps = ({ profile: { user_id, is_admin }, parcels }) => ({ user_id, is_admin, parcels });
+const mapStateToProps = ({
+  profile: { user_id, is_admin }, auth: { isLoggedIn }, parcels 
+}) => ({ user_id, is_admin, parcels, isLoggedIn });
 const mapDispatchToProps = ({ getAllParcels, getParcelsByUser });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

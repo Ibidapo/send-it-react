@@ -7,15 +7,24 @@
   left: 0;
   width: 20%;
   height: 100%;
-  padding-top: 10rem;
-  overflow-y: auto;
+  overflow-x: visible;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 
-  > h3 {
+  > #menu {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin-top: 2rem;
     margin-left: 1.25rem;
   }
 
-  > a {
+  a {
     color: #4a08ef;
     padding: 0.75rem;
     border-radius: 0.5rem;
@@ -24,14 +33,41 @@
     width: fit-content
   }
 
-  > a:hover {
+  a:hover {
     background-color: whitesmoke;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
-  > a.active {
+  a.active {
     background-color: #4a08ef !important;
     color: #ffc107;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .side-bar {
+    width: 0;   
+    z-index: 1;
+    transition: all ease-in-out 400ms;
+
+    > #menu {
+    position: absolute;
+    display: block;
+    top: 1.5rem;
+    right: -4rem;
+  }
+
+    > .content {
+      display: none;
+      transition: all ease-in-out 400ms;
+    }
+  }
+  .side-bar.active {
+    width: 200px;
+
+    > .content {
+      display: flex;
+    }
   }
 }

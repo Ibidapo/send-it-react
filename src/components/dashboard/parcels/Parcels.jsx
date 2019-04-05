@@ -11,6 +11,7 @@ const Parcels = ({ items = [] }) =>  (
         <h2 className='text-center'>No Parcel was found</h2>
       </div>
     )}
+    {items.length > 0 && (<h2 className='text-center'>{items.length} Parcel Order(s)</h2>)}
     {items.map((item) => (<Parcel key={item.parcel_id} {...item} />))}
   </div>
 );
