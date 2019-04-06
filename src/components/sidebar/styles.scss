@@ -33,7 +33,7 @@
     width: fit-content
   }
 
-  a:hover {
+  a:not(#logo):hover {
     background-color: whitesmoke;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   }

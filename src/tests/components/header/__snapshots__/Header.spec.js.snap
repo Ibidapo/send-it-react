@@ -28,7 +28,7 @@ exports[`Test for Header Component Should render correctly 1`] = `
       <img
         alt="SendIT-logo"
         className="logo"
-        src="images/logo.png"
+        src="/images/logo.png"
       />
     </Link>
   </div>

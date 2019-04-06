@@ -30,8 +30,8 @@ class Sidebar extends Component {
           <div className="bar3"></div>
         </button>
         <div className='content'>
-          <Link to='/'>
-            <img src="images/logo.png" alt="SendIT-logo" className="logo" />
+          <Link to='/' id='logo'>
+            <img src="/images/logo.png" alt="SendIT-logo" className="logo" />
           </Link>
           <h3>{is_admin ? 'Admin' : 'My Orders'} </h3>
           <NavLink to='/dashboard' activeClassName='active' exact={true}>Dashboard</NavLink>
