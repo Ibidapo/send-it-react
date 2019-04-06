@@ -59,3 +59,9 @@
 .help-text:hover, .help-text.focus {
   color: #4a08ef;
 }
+
+@media screen and (max-width: 40rem) {
+  .form-box {
+    width: 250px;
+  }
+}
