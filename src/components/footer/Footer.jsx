@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.scss';
 
 const Footer = () => (
-  <footer className="d-flex space-evenly text-center pt-2" id="contact">
+  <footer className="d-flex space-evenly text-center pt-2" id="about">
     <div className="w-40 py-2">
       <h4 className="mt-0 mb-1">Address:</h4>
         EPIC Towers,<br/>

@@ -12,12 +12,12 @@ exports[`Test for Footer Component Should render correctly 1`] = `
     >
       SendIT is the #1 courier service that helps users deliver parcels to different destinations all across the country.
     </h1>
-    <Link
+    <a
       className="purple-btn"
-      to="#content"
+      href="#content"
     >
       Get Started
-    </Link>
+    </a>
   </div>
 </div>
 `;
