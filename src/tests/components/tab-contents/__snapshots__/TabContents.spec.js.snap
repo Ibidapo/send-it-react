@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Header Component Should render correctly 1`] = `
+<div
+  className="tab-contents-area"
+  id="dashboard"
+>
+  element
+</div>
+`;

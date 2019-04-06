@@ -8,7 +8,7 @@ import { registerUser } from '../../../redux/actions/auth';
 import { getProfile } from '../../../redux/actions/profile';
 import toastOptions from '../../../utils/toastOptions';
 
-const RegisterForm = ({ isLoggedIn, registerUser, getProfile, history }) => {
+export const RegisterForm = ({ isLoggedIn, registerUser, getProfile, history }) => {
   const onSubmit = async ({ email, password }) => {
     if (isLoggedIn) return history.push('/dashboard');
 

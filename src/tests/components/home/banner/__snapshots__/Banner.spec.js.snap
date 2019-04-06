@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Footer Component Should render correctly 1`] = `
+<div
+  id="banner"
+>
+  <div
+    className="intro w-60 mx-auto text-center"
+  >
+    <h1
+      className="white p-1 mt-0"
+    >
+      SendIT is the #1 courier service that helps users deliver parcels to different destinations all across the country.
+    </h1>
+    <Link
+      className="purple-btn"
+      to="#content"
+    >
+      Get Started
+    </Link>
+  </div>
+</div>
+`;

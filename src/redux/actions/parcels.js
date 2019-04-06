@@ -16,8 +16,8 @@ export const addParcel = (details) => async (dispatch) => {
     } = await axios.post(`${apiEndpoint}/parcels/`, escapedDetails);
     dispatch({ type: ADD_PARCEL, payload: parcels });
     return ({ success, parcels });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 };
 
@@ -27,8 +27,8 @@ export const getAllParcels = () => async (dispatch) => {
 
     dispatch({ type: GET_PARCELS, payload: parcels });
     return ({ success, parcels });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 };
 
@@ -38,8 +38,8 @@ export const getParcelsByUser = (id) => async (dispatch) => {
 
     dispatch({ type: GET_PARCELS, payload: parcels });
     return ({ success, parcels });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 };
 
@@ -53,8 +53,8 @@ export const editParcelDestination = (id, details) => async (dispatch) => {
 
     dispatch({ type: UPDATE_PARCEL_DESTINATION, payload: parcels, id });
     return ({ success });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 }
 
@@ -64,8 +64,8 @@ export const cancelParcel = (id) => async (dispatch) => {
 
     dispatch({ type: CANCEL_PARCEL, payload: parcels, id });
     return ({ success });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 }
 
@@ -79,8 +79,8 @@ export const editParcelLocation = (id, details) => async (dispatch) => {
 
     dispatch({ type: UPDATE_PARCEL_LOCATION, payload: parcels, id });
     return ({ success });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 }
 
@@ -92,7 +92,7 @@ export const deliverParcel = (id) => async (dispatch) => {
 
     dispatch({ type: DELIVER_PARCEL, payload: parcels, id });
     return ({ success });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 }

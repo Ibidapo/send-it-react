@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for LoginForm Component Should render LoginForm Component 1`] = `
+<Form
+  button_label="Login"
+  onSubmit={[Function]}
+/>
+`;

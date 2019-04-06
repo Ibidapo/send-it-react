@@ -2,13 +2,17 @@
   "parser": "babel-eslint",
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "browser": true
   },
   "plugins": [
     "react",
     "jsx-a11y",
     "jest"
   ],
+  "rules": {
+    "import/no-extraneous-dependencies": 0
+  },
   "extends": [
     "airbnb-base",
     "eslint:recommended",

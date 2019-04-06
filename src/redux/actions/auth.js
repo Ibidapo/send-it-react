@@ -17,8 +17,8 @@ export const loginUser = (details) => async (dispatch) => {
     localStorage.setItem('send-it-token', token);
     dispatch({ type: LOGIN_USER });
     return ({ success, user });
-  } catch ({ response: { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 };
 
@@ -33,8 +33,8 @@ export const registerUser = (details) => async (dispatch) => {
     localStorage.setItem('send-it-token', token);
     dispatch({ type: REGISTER_USER });
     return ({ success, user });
-  } catch ({ response : { data: { error } } }) {
-    return ({ error });
+  } catch ({ response: { data: { error } = {} } }) {
+    return ({ error: error || 'Internal Server Error' });
   }
 };
 
