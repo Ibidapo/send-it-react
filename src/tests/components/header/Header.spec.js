@@ -15,7 +15,7 @@ describe('Test for Header Component', () => {
     const props = { isLoggedIn: false }
     wrapper = shallow(<Header {...props} />);
     expect(wrapper.find('button').length).toBe(1);
-    expect(wrapper.find('Link').length).toBe(4);
+    expect(wrapper.find('a').length).toBe(2);
     expect(wrapper.find('div').length).toBe(5)
     wrapper.find('button').at(0).simulate('click');
   })

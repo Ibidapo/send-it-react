@@ -28,7 +28,7 @@ exports[`Test for Header Component Should render correctly 1`] = `
       <img
         alt="SendIT-logo"
         className="logo"
-        src="images/logo.png"
+        src="/images/logo.png"
       />
     </Link>
   </div>
@@ -36,16 +36,16 @@ exports[`Test for Header Component Should render correctly 1`] = `
     className=""
     id="list"
   >
-    <Link
-      to="#about"
+    <a
+      href="#about"
     >
       About
-    </Link>
-    <Link
-      to="#contact"
+    </a>
+    <a
+      href="#about"
     >
       Contact
-    </Link>
+    </a>
     <Link
       className="purple-btn"
       to="#login"

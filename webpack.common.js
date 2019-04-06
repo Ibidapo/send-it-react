@@ -1,11 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const dotenv = require('dotenv');
-const ExtractTextPlugin = require('mini-css-extract-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import dotenv from 'dotenv';
+import ExtractTextPlugin from 'mini-css-extract-plugin';
 
 dotenv.config();
 
-module.exports = {
+export default {
   entry: './src/app.js',
   output: {
     path: path.join(__dirname, 'public'),

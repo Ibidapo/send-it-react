@@ -37,7 +37,7 @@ export class Header extends Component {
                 <div className="bar3"></div>
               </button>
               <Link to='/'>
-                <img src="images/logo.png" alt="SendIT-logo" className="logo" />
+                <img src="/images/logo.png" alt="SendIT-logo" className="logo" />
               </Link>
             </React.Fragment>
           )}
@@ -50,8 +50,8 @@ export class Header extends Component {
         <div id="list" className={toggle ? 'active' : ''}>
           {!isLoggedIn && (
             <React.Fragment>
-              <Link to="#about">About</Link>
-              <Link to="#contact">Contact</Link>
+              <a href="#about">About</a>
+              <a href="#about">Contact</a>
               <Link to="#login" className="purple-btn">Login / Register</Link>
             </React.Fragment>
           )}

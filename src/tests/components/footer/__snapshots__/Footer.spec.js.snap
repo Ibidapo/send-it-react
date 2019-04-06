@@ -3,7 +3,7 @@
 exports[`Test for Footer Component Should render correctly 1`] = `
 <footer
   className="d-flex space-evenly text-center pt-2"
-  id="contact"
+  id="about"
 >
   <div
     className="w-40 py-2"
