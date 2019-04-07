@@ -8,7 +8,7 @@ import './styles.scss';
 
 const Content = () => (
   <div id="content" className="d-flex p-2">
-    <div className="w-50 my-2">
+    <div className="w-50 my-2 mx-auto">
       <div className="content-intro mx-auto">
         <h3>Need to send a parcel but aren’t sure where to start?</h3>
         <p>At SendIT, we know how important it is to have a parcel delivery service you can trust.
@@ -19,7 +19,7 @@ const Content = () => (
         <p>Register or Login to get started.</p>
       </div>
     </div>
-    <div className="w-50 my-2">
+    <div className="w-50 my-2 mx-auto">
       <div className='form-box mx-auto'>
         <nav className='d-flex tab-group'>
           <NavLink activeClassName='active' to='/' exact={true}>Login</NavLink>

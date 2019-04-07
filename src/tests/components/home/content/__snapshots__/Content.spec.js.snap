@@ -6,7 +6,7 @@ exports[`Test for Content Component Should render correctly 1`] = `
   id="content"
 >
   <div
-    className="w-50 my-2"
+    className="w-50 my-2 mx-auto"
   >
     <div
       className="content-intro mx-auto"
@@ -26,7 +26,7 @@ exports[`Test for Content Component Should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-50 my-2"
+    className="w-50 my-2 mx-auto"
   >
     <div
       className="form-box mx-auto"
